@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-     <h1>Rupesh Bhondave Portfolio under development</h1>
+     <h1>Rupesh Bhondave'S Portfolio under development</h1>
     </>
   )
 }
