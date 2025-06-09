@@ -60,7 +60,7 @@ const App = () => {
 
   return (
     <div className={`app ${darkMode ? 'dark' : 'light'}`}>
-      <Navbar 
+      <Navbar
         language={language}
         setLanguage={setLanguage}
         darkMode={darkMode}
@@ -70,7 +70,7 @@ const App = () => {
         scrollToSection={scrollToSection}
         translations={translations}
       />
-      
+
       <Home language={language} scrollToSection={scrollToSection} />
       <AboutUs language={language} />
       <Skills language={language} />
@@ -113,9 +113,13 @@ const Navbar = ({ language, setLanguage, darkMode, setDarkMode, isMenuOpen, setI
             onChange={(e) => setLanguage(e.target.value)}
             className="language-selector"
           >
-            <option value="en">EN</option>
+            {/* <option value="en">EN</option>
             <option value="hi">हिं</option>
-            <option value="mr">मर</option>
+            <option value="mr">मर</option> */}
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="mr">मराठी</option>
+
           </select>
 
           <button
@@ -176,7 +180,7 @@ const Home = ({ language, scrollToSection }) => {
     link.download = 'Rupesh_Bhondave_Resume.pdf'; // This is the file name for download
     link.click();
   };
-  
+
 
   return (
     <section id="home" className="home-section">
@@ -184,7 +188,7 @@ const Home = ({ language, scrollToSection }) => {
         <div className="home-content">
           <div className="profile-image">
             <div className="image-circle">
-            <img src={rupeshImg} alt="Rupesh Bhondave" />
+              <img src={rupeshImg} alt="Rupesh Bhondave" />
             </div>
           </div>
           <div className="home-text">
@@ -290,8 +294,8 @@ const Skills = ({ language }) => {
               <div className="skill-icon">{skill.icon}</div>
               <h3>{skill.name}</h3>
               <div className="skill-progress">
-                <div 
-                  className="skill-fill" 
+                <div
+                  className="skill-fill"
                   style={{ width: `${skill.level}%` }}
                 ></div>
               </div>
