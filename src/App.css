@@ -463,7 +463,7 @@ section {
 }
 
 /* Skills Section */
-.skills-section {
+/* .skills-section {
   background: var(--bg-primary);
 }
 
@@ -527,8 +527,313 @@ section {
   font-weight: 600;
   color: var(--primary-color);
 }
+*/
 
-/* Timeline Styles */
+/* =============== */
+
+/* Skills Section */
+.skills-section {
+  background: var(--bg-primary);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background: var(--bg-primary);;
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.skill-card:hover::before {
+  transform: scaleX(1);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--bg-tertiary);
+  position: relative;
+}
+
+.skill-header::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
+}
+
+.skill-card:hover .skill-header::after {
+  width: 100%;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.skill-subtopics {
+  margin-top: 0.5rem;
+}
+
+.subtopics-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+}
+
+.subtopic-tag {
+  background: var(--bg-secondary);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--primary-color);
+}
+
+.dark-theme .subtopic-tag {
+  background: var(--bg-secondary);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--primary-color);
+}
+.subtopic-tag:hover::before {
+  left: 100%;
+}
+
+.subtopic-tag:active {
+  transform: translateY(-3px) scale(1.05);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skill-card {
+    padding: 1.5rem;
+  }
+  .skill-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+    /* margin-right: 0.75rem; */
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .subtopic-tag {
+    font-size: 0.8125rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .subtopics-container {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+  }
+  
+  .skills-grid {
+    gap: 1rem;
+  }
+  
+  .skill-card {
+    padding: 1.25rem;
+  }
+  
+  .skill-icon {
+    font-size: 1.75rem;
+    margin-right: 0.5rem;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.125rem;
+  }
+  
+  .subtopic-tag {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    padding: 1rem;
+  }
+  
+  .subtopics-container {
+    gap: 0.4rem;
+  }
+}
+
+/* Animation for skill cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+.skill-card:nth-child(5) { animation-delay: 0.5s; }
+.skill-card:nth-child(6) { animation-delay: 0.6s; }
+.skill-card:nth-child(7) { animation-delay: 0.7s; }
+.skill-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Animation for subtopic tags */
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.subtopic-tag {
+  animation: slideInScale 0.5s ease forwards;
+  opacity: 0;
+}
+
+
+
+/* =========== */
+
 .timeline {
   position: relative;
   max-width: 800px;
@@ -633,7 +938,9 @@ section {
   font-size: 0.75rem;
   font-weight: 500;
   border: 1px solid var(--primary-color);
-}
+} 
+
+
 
 /* Education & Experience Sections */
 .education-section {
@@ -1021,7 +1328,7 @@ button:focus,
 .qa-section {
     padding: 80px 0;
     background: var(--bg-secondary);
-    min-height: 100vh;
+    /* min-height: 100vh; */
     position: relative;
   }
   
