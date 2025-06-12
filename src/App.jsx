@@ -37,8 +37,8 @@ const App = () => {
         education: 'Education',
         experience: 'Experience',
         projects: 'Projects',
-        contact: 'Contact',
-        FAQ :"FAQ"
+        FAQ :"FAQ",
+        contact: 'Contact'
       }
     },
     hi: {
@@ -49,8 +49,8 @@ const App = () => {
         education: 'शिक्षा',
         experience: 'अनुभव',
         projects: 'प्रोजेक्ट्स',
-        contact: 'संपर्क',
-        FAQ: 'अक्सर पूछे जाने वाले सवाल'
+        FAQ: 'अक्सर पूछे जाने वाले सवाल',
+        contact: 'संपर्क'
       }
     },
     mr: {
@@ -61,8 +61,8 @@ const App = () => {
         education: 'शिक्षण',
         experience: 'अनुभव',
         projects: 'प्रकल्प',
-        contact: 'संपर्क',
-        FAQ: 'नेहमी विचारले जाणारे प्रश्न'
+         FAQ: 'नेहमी विचारले जाणारे प्रश्न',
+        contact: 'संपर्क'
       }
     }
   };
