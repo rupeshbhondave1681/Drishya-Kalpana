@@ -138,7 +138,7 @@ export default function Skills({ language }) {
 
   return (
     <section id="skills" className="skills-section">
-      <div className="container">
+      <div className="skill-container">
         <h2 className="section-title">{content[language].title}</h2>
         <div className="skills-grid">
           {skills[language].map((skill, index) => (
