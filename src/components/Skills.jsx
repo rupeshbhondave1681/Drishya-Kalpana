@@ -137,27 +137,50 @@ export default function Skills({ language }) {
   };
 
   return (
+    // <section id="skills" className="skill-section">
+    //   <div className="skill-container">
+    //     <h2 className="skill-title">{content[language].title}</h2>
+    //     <div className="skill-grid">
+    //       {skills[language].map((skill, index) => (
+    //         <div key={index} className="skill-card">
+    //           <div className="skill-header">
+    //             <div className="skill-icon">{skill.icon}</div>
+    //             <h3 className="skill-name">{skill.name}</h3>
+    //           </div>
+    //           <div className="skill-subtopics">
+    //             <div className="skill-subtopic-container">
+    //               {skill.subtopics.map((sub, i) => (
+    //                 <div key={i} className="skill-subtopic">{sub}</div>
+    //               ))}
+    //             </div>
+    //           </div>
+    //         </div>
+    //       ))}
+    //     </div>
+    //   </div>
+    // </section>
+
     <section id="skills" className="skill-section">
-      <div className="skill-container">
-        <h2 className="skill-title">{content[language].title}</h2>
-        <div className="skill-grid">
-          {skills[language].map((skill, index) => (
-            <div key={index} className="skill-card">
-              <div className="skill-header">
-                <div className="skill-icon">{skill.icon}</div>
-                <h3 className="skill-name">{skill.name}</h3>
-              </div>
-              <div className="skill-subtopics">
-                <div className="skill-subtopic-container">
-                  {skill.subtopics.map((sub, i) => (
-                    <div key={i} className="skill-subtopic">{sub}</div>
-                  ))}
-                </div>
+    <div className="skill-container">
+      <h2 className="skill-title">{content[language].title}</h2>
+      <div className="skill-grid">
+        {skills[language].map((skill, index) => (
+          <div key={index} className="skill-card">
+            <div className="skill-header">
+              <div className="skill-icon">{skill.icon}</div>
+              <h3 className="skill-name">{skill.name}</h3>
+            </div>
+            <div className="skill-subtopics">
+              <div className="skill-subtopic-container">
+                {skill.subtopics.map((sub, i) => (
+                  <div key={i} className="tech-tag">{sub}</div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
+  </section>
   );
 }
