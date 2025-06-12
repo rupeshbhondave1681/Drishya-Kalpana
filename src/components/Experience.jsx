@@ -14,7 +14,7 @@ export default function Experience({ language }) {
           duration: "July 2024 – Present",
           location: "Mumbai, India",
           description: "Designed and developed enterprise-level E-KYC platform with multi-role access and document management.",
-          technologies: ["React JS", "Spring Boot", "Hibernate", "MSSQL", "REST APIs", "Tailwind CSS"]
+          technologies: ["React JS", "Spring Boot", "Hibernate", "MSSQL", "REST APIs","SOAP API","React Material UI","AG Grid","Bootstrap"]
         },
         {
           title: "Software Engineer",
@@ -22,7 +22,7 @@ export default function Experience({ language }) {
           duration: "July 2023 – July 2024",
           location: "Mumbai, India",
           description: "Full Stack Developer for Ambit LMS, a loan management system.",
-          technologies: ["Java", "Spring Boot", "Hibernate", "REST API", "Angular 14", "MSSQL", "Bootstrap"]
+          technologies: ["Java", "Spring Boot","Spring Security","Microservices", "Hibernate", "REST API", "Angular 14", "MSSQL", "Bootstrap","Angular Material","Slick Grid"]
         },
         {
           title: "Web Developer Intern",
