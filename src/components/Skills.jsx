@@ -1,93 +1,11 @@
 import React, { useState } from 'react';
 
 export default function Skills({ language }) {
-  //   const content = {
-  //       en: { title: "Skills & Technologies" },
-  //       hi: { title: "कौशल और तकनीकें" },
-  //       mr: { title: "कौशल्ये आणि तंत्रज्ञान" }
-  //     };
-    
-  //     const skills = [
-  //       { name: 'Java', icon: '☕', level: 90 },
-  //       { name: 'Spring Boot', icon: '🍃', level: 85 },
-  //       { name: 'React JS', icon: '⚛️', level: 88 },
-  //       { name: 'Angular', icon: '🅰️', level: 80 },
-  //       { name: 'JavaScript', icon: '🟨', level: 85 },
-  //       { name: 'MySQL', icon: '🗄️', level: 82 },
-  //       { name: 'REST API', icon: '🔗', level: 90 },
-  //       { name: 'Git', icon: '📦', level: 85 }
-  //     ];
-  // return (
-  //   <section id="skills" className="skills-section">
-  //   <div className="container">
-  //     <h2 className="section-title">{content[language].title}</h2>
-  //     <div className="skills-grid">
-  //       {skills.map((skill, index) => (
-  //         <div key={index} className="skill-card">
-  //           <div className="skill-icon">{skill.icon}</div>
-  //           <h3>{skill.name}</h3>
-  //           <div className="skill-progress">
-  //             <div
-  //               className="skill-fill"
-  //               style={{ width: `${skill.level}%` }}
-  //             ></div>
-  //           </div>
-  //           <span className="skill-percentage">{skill.level}%</span>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   </div>
-  // </section>
-  // )
-
   const content = {
     en: { title: "Skills & Technologies" },
     hi: { title: "कौशल और तकनीकें" },
     mr: { title: "कौशल्ये आणि तंत्रज्ञान" }
   };
-
-  // const skills = [
-  //   {
-  //     name: 'Java',
-  //     icon: '☕',
-  //     subtopics: ['Core Java', 'Collections', 'Multithreading', 'OOPs']
-  //   },
-  //   {
-  //     name: 'Spring Boot',
-  //     icon: '🍃',
-  //     subtopics: ['Spring MVC', 'Spring Security', 'REST APIs', 'Microservices']
-  //   },
-  //   {
-  //     name: 'React JS',
-  //     icon: '⚛️',
-  //     subtopics: ['Components', 'Hooks', 'State Management', 'Redux']
-  //   },
-  //   {
-  //     name: 'Angular',
-  //     icon: '🅰️',
-  //     subtopics: ['Components', 'Services', 'TypeScript', 'RxJS']
-  //   },
-  //   {
-  //     name: 'JavaScript',
-  //     icon: '🟨',
-  //     subtopics: ['ES6+', 'DOM Manipulation', 'Async/Await', 'Promises']
-  //   },
-  //   {
-  //     name: 'MySQL',
-  //     icon: '🗄️',
-  //     subtopics: ['Database Design', 'Query Optimization', 'Joins', 'Indexing']
-  //   },
-  //   {
-  //     name: 'REST API',
-  //     icon: '🔗',
-  //     subtopics: ['HTTP Methods', 'API Design', 'Authentication', 'JSON']
-  //   },
-  //   {
-  //     name: 'Git',
-  //     icon: '📦',
-  //     subtopics: ['Version Control', 'Branching', 'GitHub', 'Collaboration']
-  //   }
-  // ];
 
   const skills = {
     en: [
@@ -221,46 +139,24 @@ export default function Skills({ language }) {
   return (
     <section id="skills" className="skills-section">
       <div className="container">
-        {/* <h2 className="section-title">{content[language].title}</h2>
+        <h2 className="section-title">{content[language].title}</h2>
         <div className="skills-grid">
-          {skills.map((skill, index) => (
+          {skills[language].map((skill, index) => (
             <div key={index} className="skill-card">
               <div className="skill-header">
                 <div className="skill-icon">{skill.icon}</div>
                 <h3>{skill.name}</h3>
               </div>
-              
               <div className="skill-subtopics">
                 <div className="subtopics-container">
-                  {skill.subtopics.map((subtopic, subIndex) => (
-                    <div key={subIndex} className="subtopic-tag">
-                      {subtopic}
-                    </div>
+                  {skill.subtopics.map((sub, i) => (
+                    <div key={i} className="subtopic-tag">{sub}</div>
                   ))}
                 </div>
               </div>
             </div>
           ))}
-        </div> */}
-        <h2 className="section-title">{content[language].title}</h2>
-<div className="skills-grid">
-  {skills[language].map((skill, index) => (
-    <div key={index} className="skill-card">
-      <div className="skill-header">
-        <div className="skill-icon">{skill.icon}</div>
-        <h3>{skill.name}</h3>
-      </div>
-      <div className="skill-subtopics">
-        <div className="subtopics-container">
-          {skill.subtopics.map((sub, i) => (
-            <div key={i} className="subtopic-tag">{sub}</div>
-          ))}
         </div>
-      </div>
-    </div>
-  ))}
-</div>
-
       </div>
     </section>
   );
