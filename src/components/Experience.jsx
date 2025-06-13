@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Experience({ language }) {
+  
     const content = {
         en: { title: "Work Experience" },
         hi: { title: "कार्य अनुभव" },

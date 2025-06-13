@@ -520,7 +520,7 @@ section {
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 40px;
 }
@@ -609,7 +609,7 @@ section {
   justify-content: center;
 }
 
-.skill-subtopic {
+/* .tech-tag {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   padding: 8px 16px;
@@ -619,14 +619,14 @@ section {
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
   white-space: nowrap;
-}
+} */
 
-.skill-subtopic:hover {
+/* .tech-tag:hover {
   background: var(--primary-color);
   color: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-}
+} */
 
 /* Tablet Styles */
 @media (max-width: 1024px) {
@@ -645,7 +645,7 @@ section {
   }
   
   .skill-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
   
@@ -718,10 +718,10 @@ section {
     gap: 8px;
   }
   
-  .skill-subtopic {
+  /* .tech-tag {
     padding: 6px 12px;
     font-size: 0.8rem;
-  }
+  } */
 }
 
 /* Small Mobile Styles */
@@ -754,10 +754,10 @@ section {
     font-size: 1.1rem;
   }
   
-  .skill-subtopic {
+  /* .tech-tag {
     padding: 5px 10px;
     font-size: 0.75rem;
-  }
+  } */
 }
 
 /* Animation for skill cards on scroll */
@@ -808,10 +808,10 @@ section {
   outline-offset: 2px;
 }
 
-.skill-subtopic:focus {
+/* .tech-tag:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
-}
+} */
 /* =========== */
 
 .timeline {

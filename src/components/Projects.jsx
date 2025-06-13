@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {FaEye } from 'react-icons/fa';
-
-
+import Ekyc from '../assets/EkycBackOffice.png';
+import Ambit from '../assets/DedupeAmbit.png';
+import NeoGrowth from '../assets/AdvanceSuite2.0.jpg';
+import XtremLicense from '../assets/XtremeLicense.jpeg'
 export default function Projects({ language }) {
     const content = {
         en: { title: "Projects", viewProject: "View Project" },
@@ -14,19 +16,25 @@ export default function Projects({ language }) {
           title: "E-KYC Platform",
           description: "Enterprise-level platform with multi-role access and document management system.",
           technologies: ["React JS", "Spring Boot", "MSSQL"],
-          image: "https://via.placeholder.com/300x200/2563eb/FFFFFF?text=E-KYC"
+          image:Ekyc
         },
         {
           title: "Ambit LMS",
           description: "Comprehensive loan management system with audit logs and admin dashboards.",
           technologies: ["Angular 14", "Spring Boot", "MSSQL"],
-          image: "https://via.placeholder.com/300x200/2563eb/FFFFFF?text=LMS"
+          image: Ambit
         },
         {
-          title: "Student Portal",
+          title: "AdvanceSuite 2.0",
           description: "Student registration and inquiry management system with enhanced UI.",
           technologies: ["React JS", "Bootstrap", "CSS"],
-          image: "https://via.placeholder.com/300x200/2563eb/FFFFFF?text=Portal"
+          image:NeoGrowth
+        },
+        {
+          title: "Xtrem License Portal",
+          description: "Student registration and inquiry management system with enhanced UI.",
+          technologies: ["React JS", "Bootstrap", "CSS"],
+          image:XtremLicense
         }
       ];
     
