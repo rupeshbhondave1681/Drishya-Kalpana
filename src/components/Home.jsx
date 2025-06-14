@@ -9,7 +9,7 @@ export default function Home({ language, scrollToSection }) {
         greeting: "Hello, I'm",
         name: "Rupesh Bhondave",
         title: "Full Stack Software Developer",
-        description: "I’m a Full Stack Developer skilled in building scalable web and enterprise applications. I specialize in Java, Spring Boot, React JS, Angular, and REST APIs. My work in the BFSI domain emphasizes clean architecture, secure integration, and agile collaboration to deliver efficient, maintainable solutions.",
+        description: "I’m a Full Stack Developer focused on building scalable web and enterprise applications. Skilled in Java, Spring Boot, React JS, Angular, and REST APIs. I’ve contributed to BFSI solutions with clean architecture, secure integrations, and agile collaboration.",
         getInTouch: "Get In Touch",
         downloadResume: "Download Resume"
       },      
