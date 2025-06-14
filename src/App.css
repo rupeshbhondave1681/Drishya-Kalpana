@@ -931,7 +931,15 @@ section {
   background: var(--bg-primary);
 }
 
+
+
+
+
 /* Projects Section */
+
+
+
+
 .projects-section {
   background: var(--bg-secondary);
 }
@@ -967,6 +975,64 @@ section {
   transform: scale(1.05);
 }
 
+
+/* Additional styles for project dates and organizations */
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-duration {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.project-duration::before {
+  content: "📅";
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.project-organization {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.project-organization::before {
+  content: "🏢";
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .project-meta {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .project-duration,
+  .project-organization {
+    font-size: 0.8rem;
+  }
+  
+  .project-duration::before,
+  .project-organization::before {
+    font-size: 0.7rem;
+  }
+}
+
 .project-content {
   padding: 1.5rem;
 }
@@ -990,6 +1056,9 @@ section {
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
+
+
+
 
 /* Contact Section */
 .contact-section {

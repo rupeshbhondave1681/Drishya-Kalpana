@@ -9,7 +9,7 @@ export default function Home({ language, scrollToSection }) {
           greeting: "Hello, I'm",
           name: "Rupesh Bhondave",
           title: "Full Stack Software Developer",
-          description: "I’m a Full Stack Developer with 2+ years of experience in building scalable web and enterprise applications using Java, Spring Boot, React JS, Angular, and REST APIs. I’ve worked on platforms like E-KYC and Loan Management Systems, focusing on clean architecture, secure integrations, and agile teamwork to deliver high-performance solutions.",
+          description: "I’m a Full Stack Developer with 2+ years of experience in building scalable web and enterprise applications. I specialize in Java, Spring Boot, React JS, Angular, and REST APIs. I’ve worked on platforms like E-KYC and Loan Management, focusing on clean architecture, secure integration, and agile teamwork to deliver efficient solutions.",
           getInTouch: "Get In Touch",
           downloadResume: "Download Resume"
         },
@@ -38,16 +38,27 @@ export default function Home({ language, scrollToSection }) {
         link.click();
       };
 
+      const fieldUrl = {
+        mailId: "mailto:bhondave.rupesh.1681@gmail.com",
+        XtremSoftUrl: "https://xtremsoftindia.com",
+        linkdinUrl: "https://in.linkedin.com/company/xtremsoft-technologies-pvt-ltd",
+        whatsappUrl: "https://wa.me/919892728310?text=Hello Vipin Bokariya!'"
+      };
+      
+      const GoToEmailId = () => {
+        window.location.href = `${fieldUrl.mailId}`;
+      };
+
       // const GoToEmailId = () => {
       //   window.location.href = `mailto:bhondave.rupesh.1681@gmail.com?cc=yoursecondary@example.com&subject=Contacting You&body=Hi Rupesh,`;
       // };
 
-      const GoToEmailId = () => {
-  window.open(
-    'https://mail.google.com/mail/?view=cm&fs=1&to=bhondave.rupesh.1681@gmail.com&su=Contacting%20You&body=Hi%20Rupesh,',
-    '_blank'
-  );
-};
+//       const GoToEmailId = () => {
+//   window.open(
+//     'https://mail.google.com/mail/?view=cm&fs=1&to=bhondave.rupesh.1681@gmail.com&su=Contacting%20You&body=Hi%20Rupesh,',
+//     '_blank'
+//   );
+// };
 
       
   return (

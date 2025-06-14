@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {  FaGlobe, FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
+import {  FaGlobe, FaEnvelope, FaPhone, FaLinkedin, FaGithub,FaWhatsapp  } from 'react-icons/fa';
 
+import { FaPhoneFlip } from "react-icons/fa6";
 
 export default function Contact({ language }) {
 
@@ -64,9 +65,16 @@ export default function Contact({ language }) {
                <a href="https://github.com/rupeshbhondave1681" target="_blank" rel="noopener noreferrer">
                  <FaGithub />
                </a>
+               <a href="https://wa.me/919359886138?text=Hello Rupesh Bhondave !" target="_blank" rel="noopener noreferrer">
+                 <FaWhatsapp  />
+               </a>
+               <a href="tel:+919359886138" target="_blank" rel="noopener noreferrer">
+                 <FaPhoneFlip  />
+               </a>
              </div>
            </div>
          </div>
        </section>
-  )
+  ) 
 }
+   

@@ -14,7 +14,7 @@ export default function Experience({ language }) {
           company: "Swyftovate Softwares LLP",
           duration: "July 2024 – Present",
           location: "Mumbai, India",
-          description: "Designed and developed enterprise-level E-KYC platform with multi-role access and document management.",
+          description: "Independently handled full-stack development, including UI, backend, and database. Built secure portals using Spring Boot and React. Integrated third-party APIs for document verification and license generation. Developed and managed proxy server architecture to improve security. Led all phases from requirement gathering to testing and deployment. Created scalable multi-role access workflows and automated license management. Provided client support and implemented continuous change requests post-deployment.",
           technologies: ["React JS", "Spring Boot", "Hibernate", "MSSQL", "REST APIs","SOAP API","React Material UI","AG Grid","Bootstrap"]
         },
         {
@@ -22,7 +22,7 @@ export default function Experience({ language }) {
           company: "Nucsoft Ltd",
           duration: "July 2023 – July 2024",
           location: "Mumbai, India",
-          description: "Full Stack Developer for Ambit LMS, a loan management system.",
+          description: "Worked as a full-stack developer handling frontend and backend modules. Resolved UAT issues, implemented change requests, and created production-ready APIs. Provided backend integration with Angular, and handled CR-to-deployment cycles. Coordinated with QA and business teams to ensure timely delivery. Focused on performance optimization, UI improvements, and secure API implementations. Supported post-production environments and ensured system stability.",
           technologies: ["Java", "Spring Boot","Spring Security","Microservices", "Hibernate", "REST API", "Angular 14", "MSSQL", "Bootstrap","Angular Material","Slick Grid"]
         },
         {
@@ -30,7 +30,7 @@ export default function Experience({ language }) {
           company: "JBK Tutorials",
           duration: "Aug 2021 – Oct 2021",
           location: "Remote",
-          description: "Enhanced UI and developed student registration and inquiry modules.",
+          description: "Developed basic user interfaces and forms using React JS. Implemented lazy loading and routing to optimize performance. Fixed backend integration bugs using Spring Boot and MySQL. Contributed to UI responsiveness and enhanced frontend logic. Gained foundational experience in full-stack workflows and remote collaboration.",
           technologies: ["React JS", "HTML", "CSS", "Bootstrap"]
         }
       ];

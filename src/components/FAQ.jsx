@@ -3,89 +3,92 @@ import React, { useState} from 'react';
 export default function FAQ({language}) {
      const [activeQuestion, setActiveQuestion] = useState(null);
     
-      const qaData = {
-        en: [
-          {
-            id: 1,
-            question: "What are your 5-year career goals?",
-            answer: "In the next 5 years, I aim to become a senior full-stack developer with expertise in modern technologies like React, Node.js, and cloud platforms. I want to lead development teams, contribute to open-source projects, and mentor junior developers while building scalable applications that make a real impact."
-          },
-          {
-            id: 2,
-            question: "What have you actually found in your development journey?",
-            answer: "Through my development journey, I've discovered that continuous learning is crucial in tech. I've found immense satisfaction in solving complex problems, building user-friendly applications, and seeing how code can transform ideas into reality. The collaborative nature of development and the supportive developer community have been particularly rewarding."
-          },
-          {
-            id: 3,
-            question: "What motivates you as a developer?",
-            answer: "I'm motivated by the challenge of creating elegant solutions to complex problems. The ability to build applications that can positively impact users' lives drives me forward. I also find inspiration in staying updated with emerging technologies and contributing to innovative projects that push boundaries."
-          },
-          {
-            id: 4,
-            question: "How do you handle challenging projects?",
-            answer: "I approach challenging projects by breaking them down into smaller, manageable tasks. I research thoroughly, collaborate with team members, and aren't afraid to ask questions. I believe in iterative development, regular testing, and maintaining clean, documented code to ensure project success."
-          },
-          {
-            id: 5,
-            question: "What's your preferred development stack?",
-            answer: "I prefer working with modern JavaScript frameworks like React for frontend development, paired with Node.js for backend services. I'm comfortable with databases like MongoDB and PostgreSQL, and I enjoy working with cloud platforms like AWS and Azure for deployment and scaling."
-          }
-        ],
-        hi: [
-          {
-            id: 1,
-            question: "आपके 5-साल के करियर लक्ष्य क्या हैं?",
-            answer: "अगले 5 वर्षों में, मैं React, Node.js और क्लाउड प्लेटफॉर्म जैसी आधुनिक तकनीकों में विशेषज्ञता के साथ एक सीनियर फुल-स्टैक डेवलपर बनने का लक्ष्य रखता हूं। मैं डेवलपमेंट टीमों का नेतृत्व करना, ओपन-सोर्स प्रोजेक्ट्स में योगदान देना चाहता हूं।"
-          },
-          {
-            id: 2,
-            question: "आपको अपनी डेवलपमेंट यात्रा में वास्तव में क्या मिला है?",
-            answer: "अपनी डेवलपमेंट यात्रा के दौरान, मैंने पाया है कि तकनीक में निरंतर सीखना महत्वपूर्ण है। जटिल समस्याओं को हल करने, उपयोगकर्ता-अनुकूल एप्लिकेशन बनाने में मुझे अपार संतुष्टि मिली है।"
-          },
-          {
-            id: 3,
-            question: "एक डेवलपर के रूप में आपको क्या प्रेरित करता है?",
-            answer: "मुझे जटिल समस्याओं के लिए सुंदर समाधान बनाने की चुनौती प्रेरित करती है। उपयोगकर्ताओं के जीवन को सकारात्मक रूप से प्रभावित करने वाले एप्लिकेशन बनाने की क्षमता मुझे आगे बढ़ाती है।"
-          },
-          {
-            id: 4,
-            question: "आप चुनौतीपूर्ण परियोजनाओं को कैसे संभालते हैं?",
-            answer: "मैं चुनौतीपूर्ण परियोजनाओं को छोटे, प्रबंधनीय कार्यों में विभाजित करके देखता हूं। मैं गहन अनुसंधान करता हूं, टीम के सदस्यों के साथ सहयोग करता हूं।"
-          },
-          {
-            id: 5,
-            question: "आपका पसंदीदा डेवलपमेंट स्टैक क्या है?",
-            answer: "मैं फ्रंटएंड डेवलपमेंट के लिए React जैसे आधुनिक JavaScript फ्रेमवर्क के साथ काम करना पसंद करता हूं, बैकएंड सेवाओं के लिए Node.js के साथ।"
-          }
-        ],
-        mr: [
-          {
-            id: 1,
-            question: "तुमची 5-वर्षाची करिअर उद्दिष्टे काय आहेत?",
-            answer: "पुढील 5 वर्षांत, मी React, Node.js आणि क्लाउड प्लॅटफॉर्म सारख्या आधुनिक तंत्रज्ञानामध्ये तज्ञता असलेला सीनियर फुल-स्टॅक डेव्हलपर बनण्याचे उद्दिष्ट ठेवले आहे।"
-          },
-          {
-            id: 2,
-            question: "तुम्हाला तुमच्या डेव्हलपमेंट प्रवासात खरोखर काय सापडले आहे?",
-            answer: "माझ्या डेव्हलपमेंट प्रवासाद्वारे, मी शोधून काढले आहे की तंत्रज्ञानामध्ये सतत शिकणे महत्त्वाचे आहे. जटिल समस्या सोडवण्यात, वापरकर्ता-अनुकूल अनुप्रयोग तयार करण्यात मला अपार समाधान मिळाले आहे."
-          },
-          {
-            id: 3,
-            question: "डेव्हलपर म्हणून तुम्हाला काय प्रेरणा देते?",
-            answer: "जटिल समस्यांसाठी सुंदर उपाय तयार करण्याची आव्हान मला प्रेरित करते. वापरकर्त्यांच्या जीवनावर सकारात्मक परिणाम करू शकणारे अनुप्रयोग तयार करण्याची क्षमता मला पुढे नेते."
-          },
-          {
-            id: 4,
-            question: "तुम्ही आव्हानात्मक प्रकल्प कसे हाताळता?",
-            answer: "मी आव्हानात्मक प्रकल्पांना लहान, व्यवस्थापित करता येणाऱ्या कामांमध्ये विभागून पाहतो. मी सखोल संशोधन करतो, टीमच्या सदस्यांसोबत सहकार्य करतो."
-          },
-          {
-            id: 5,
-            question: "तुमचा पसंतीचा डेव्हलपमेंट स्टॅक कोणता आहे?",
-            answer: "मी फ्रंटएंड डेव्हलपमेंटसाठी React सारख्या आधुनिक JavaScript फ्रेमवर्कसोबत काम करणे पसंत करतो, बॅकएंड सेवांसाठी Node.js सोबत."
-          }
-        ]
-      };
+     const qaData = {
+      en: [
+        {
+          id: 1,
+          question: "What is your vision for your software career?",
+          answer: "With over 2 years of experience in both product-based and service-based companies, my goal is to become a software developer who designs clean, scalable, and easy-to-understand systems. I want to build solutions that are efficient, handle high traffic smoothly, and can be easily understood and maintained by any team member. I'm focused on improving my understanding of architecture and exploring areas like cloud, performance optimization, and Gen AI."
+        },
+        {
+          id: 2,
+          question: "How do you approach projects that grow in complexity?",
+          answer: "I break down complex projects into smaller parts and plan things step by step. I focus on keeping the structure of the code clean and organized so that it becomes easy to manage, test, and scale later. I believe good planning and communication within the team play a major role in managing complex projects."
+        },
+        {
+          id: 3,
+          question: "What challenges have you faced while working with databases, and how did you handle them?",
+          answer: "I've come across slow data access, unnecessary data duplication, and difficult relationships between tables. To solve this, I made sure the structure of the database was well-designed, used efficient queries, and handled data updates carefully to keep everything consistent and reliable."
+        },
+        {
+          id: 4,
+          question: "What motivates you to keep learning?",
+          answer: "I’m excited by the idea of building better systems and understanding how things work at a deeper level. I enjoy learning from people around me, staying updated with current trends, and improving the way I write and organize my code. My curiosity and the desire to build long-lasting solutions keep me going."
+        },
+        {
+          id: 5,
+          question: "How do you ensure that your code is easy for others to understand and work with?",
+          answer: "I write code that follows a consistent structure, add clear comments, and name things in a way that explains their purpose. I avoid making things overly complex and try to keep everything straightforward so that any developer joining the project can understand it easily."
+        }
+      ],
+    
+      hi: [
+        {
+          id: 1,
+          question: "आपका सॉफ्टवेयर करियर के लिए विज़न क्या है?",
+          answer: "2+ वर्षों के अनुभव के साथ मेरा लक्ष्य ऐसा डेवलपर बनना है जो साफ, स्केलेबल और आसानी से समझे जाने वाले सिस्टम डिज़ाइन करे। मैं ऐसी चीजें बनाना चाहता हूँ जो कुशलता से काम करें, ज़्यादा ट्रैफिक को संभाल सकें और टीम में कोई भी व्यक्ति उन्हें आसानी से समझ और मेंटेन कर सके।"
+        },
+        {
+          id: 2,
+          question: "जब कोई प्रोजेक्ट जटिल होता जाता है तो आप उसे कैसे संभालते हैं?",
+          answer: "मैं बड़े प्रोजेक्ट्स को छोटे-छोटे हिस्सों में बाँटता हूँ और हर स्टेप को अच्छे से प्लान करता हूँ। मैं कोड को साफ और अच्छी संरचना में रखने पर ध्यान देता हूँ ताकि आगे जाकर उसे स्केल और मेंटेन करना आसान हो।"
+        },
+        {
+          id: 3,
+          question: "डेटाबेस के साथ काम करते समय आपने किन चुनौतियों का सामना किया है और उन्हें कैसे हल किया?",
+          answer: "कभी-कभी डेटा धीमा आता है, डेटा डुप्लिकेट हो जाता है या टेबल्स के बीच संबंध ठीक से नहीं बनते। इसे सुधारने के लिए मैंने डेटाबेस की डिज़ाइन को बेहतर किया, सही तरीके से डेटा को हैंडल किया और ज़रूरी जगहों पर बदलाव किए।"
+        },
+        {
+          id: 4,
+          question: "आपको सीखते रहने के लिए क्या प्रेरित करता है?",
+          answer: "मैं हमेशा जानना चाहता हूँ कि चीजें बेहतर तरीके से कैसे की जा सकती हैं। नए टेक्नोलॉजी सीखना, टीम से कुछ नया सीखना और अपने कोड को लगातार बेहतर बनाना मुझे प्रेरित करता है।"
+        },
+        {
+          id: 5,
+          question: "आप कैसे सुनिश्चित करते हैं कि आपका कोड दूसरों के लिए समझने योग्य हो?",
+          answer: "मैं हमेशा कोड को एक तय स्ट्रक्चर में लिखता हूँ, सही नाम देता हूँ और ज़रूरत पड़ने पर कमेंट्स भी जोड़ता हूँ। मैं कोशिश करता हूँ कि कोड सीधा और स्पष्ट हो ताकि कोई भी नया डेवलपर उसे आसानी से समझ सके।"
+        }
+      ],
+    
+      mr: [
+        {
+          id: 1,
+          question: "तुमचं सॉफ्टवेअर करिअरसाठी लक्ष्य काय आहे?",
+          answer: "2+ वर्षांच्या अनुभवासह, मी एक असा डेव्हलपर बनण्याचा प्रयत्न करतो जो स्पष्ट, स्केलेबल आणि कोणालाही समजणारे सोल्यूशन्स तयार करतो. मी अशी प्रणाली बनवू इच्छितो जी अधिक ट्रॅफिक हाताळू शकेल आणि ज्या कोडवर कोणताही डेव्हलपर सहज काम करू शकेल."
+        },
+        {
+          id: 2,
+          question: "जेव्हा प्रोजेक्ट जटिल होतो तेव्हा तुम्ही ते कसे हाताळता?",
+          answer: "मी प्रोजेक्टचे छोटे भाग करतो आणि प्रत्येक टप्पा नीट प्लॅन करतो. कोड व्यवस्थित ठेवण्यावर आणि त्याला समजण्यास सुलभ ठेवण्यावर लक्ष केंद्रित करतो. त्यामुळे तो सहज मेंटेन आणि स्केल करता येतो."
+        },
+        {
+          id: 3,
+          question: "डेटाबेससह काम करताना तुम्ही कोणत्या अडचणींना सामोरे गेला आणि कशा प्रकारे त्याचे निराकरण केले?",
+          answer: "कधी कधी डेटा हळू मिळतो, टेबल्समध्ये चुकीचे संबंध असतात किंवा डेटा डुप्लिकेट होतो. मी डेटाबेस स्ट्रक्चर सुधारले, योग्य क्वेरीज वापरल्या आणि डेटा नीट हँडल केला जेणेकरून तो अचूक आणि कार्यक्षम राहील."
+        },
+        {
+          id: 4,
+          question: "तुम्हाला सतत शिकण्यासाठी काय प्रेरणा देते?",
+          answer: "मी नवीन गोष्टी जाणून घेण्यात आनंद घेतो, विशेषतः ज्या गोष्टी मला अधिक चांगले सोल्यूशन्स तयार करण्यात मदत करतात. टीमकडून शिकणे आणि स्वतःचा कोड सुधारत राहणे ही माझी प्रेरणा आहे."
+        },
+        {
+          id: 5,
+          question: "तुमचा कोड इतरांना समजावा यासाठी तुम्ही काय करता?",
+          answer: "मी कोडला व्यवस्थित ठेवतो, स्पष्ट नावं वापरतो आणि आवश्यक तेथे कमेंट्स लिहितो. मी कोड शक्य तितका सोपा आणि समजण्यासारखा ठेवतो जेणेकरून कोणीही सहजपणे तो समजू शकेल."
+        }
+      ]
+    };
+    
     
       const toggleQuestion = (questionId) => {
         setActiveQuestion(activeQuestion === questionId ? null : questionId);
