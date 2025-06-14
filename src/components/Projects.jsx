@@ -239,9 +239,9 @@ export default function Projects({ language }) {
                 <span key={techIndex} className="tech-tag">{tech}</span>
               ))}
             </div>
-            <button className="btn btn-primary">
+            {/* <button className="btn btn-primary">
               <FaEye /> {content[language].viewProject}
-            </button>
+            </button> */}
           </div>
         </div>
       ))}
