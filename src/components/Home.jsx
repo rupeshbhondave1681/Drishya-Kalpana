@@ -5,14 +5,14 @@ import rupeshImg from '../assets/Rupesh.jpg';
 export default function Home({ language, scrollToSection }) {
 
     const content = {
-        en: {
-          greeting: "Hello, I'm",
-          name: "Rupesh Bhondave",
-          title: "Full Stack Software Developer",
-          description: "I’m a Full Stack Developer with 2+ years of experience in building scalable web and enterprise applications. I specialize in Java, Spring Boot, React JS, Angular, and REST APIs. I’ve worked on platforms like E-KYC and Loan Management, focusing on clean architecture, secure integration, and agile teamwork to deliver efficient solutions.",
-          getInTouch: "Get In Touch",
-          downloadResume: "Download Resume"
-        },
+      en: {
+        greeting: "Hello, I'm",
+        name: "Rupesh Bhondave",
+        title: "Full Stack Software Developer",
+        description: "I’m a Full Stack Developer skilled in building scalable web and enterprise applications. I specialize in Java, Spring Boot, React JS, Angular, and REST APIs. My work in the BFSI domain emphasizes clean architecture, secure integration, and agile collaboration to deliver efficient, maintainable solutions.",
+        getInTouch: "Get In Touch",
+        downloadResume: "Download Resume"
+      },      
         hi: {
           greeting: "नमस्ते, मैं हूं",
           name: "रुपेश भोंडवे",
