@@ -32,9 +32,6 @@ export default function Navbar({ language, setLanguage, darkMode, setDarkMode, i
                 onChange={(e) => setLanguage(e.target.value)}
                 className="language-selector"
               >
-                {/* <option value="en">EN</option>
-                <option value="hi">हिं</option>
-                <option value="mr">मर</option> */}
                 <option value="en">English</option>
                 <option value="hi">हिन्दी</option>
                 <option value="mr">मराठी</option>

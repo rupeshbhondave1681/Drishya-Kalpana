@@ -205,6 +205,139 @@ body.dark-theme {
   background: var(--bg-secondary);
 }
 
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: var(--bg-primary);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-xl);
+    overflow-y: auto;
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    margin: 0.5rem 0;
+    border-radius: 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+  }
+
+  .nav-link:hover::before,
+  .nav-link:focus::before {
+    left: 0;
+  }
+
+  .nav-link:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-controls {
+    gap: 0.5rem;
+  }
+
+  .language-selector {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .theme-toggle {
+    padding: 0.4rem;
+    font-size: 1rem;
+  }
+
+  /* Developer Credit - Only visible on mobile */
+  .nav-menu::after {
+    content: "Developed by Rupesh Bhondave";
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.875rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background: var(--bg-tertiary);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+  }
+
+  /* Animation for mobile menu items */
+  .nav-menu.active .nav-link {
+    animation: slideInFromRight 0.3s ease forwards;
+  }
+
+  .nav-menu.active .nav-link:nth-child(1) { animation-delay: 0.1s; }
+  .nav-menu.active .nav-link:nth-child(2) { animation-delay: 0.2s; }
+  .nav-menu.active .nav-link:nth-child(3) { animation-delay: 0.3s; }
+  .nav-menu.active .nav-link:nth-child(4) { animation-delay: 0.4s; }
+  .nav-menu.active .nav-link:nth-child(5) { animation-delay: 0.5s; }
+  .nav-menu.active .nav-link:nth-child(6) { animation-delay: 0.6s; }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
